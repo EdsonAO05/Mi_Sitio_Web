@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercado Libre Style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --ml-yellow: #ffe600;
+            --ml-blue: #3483fa;
+            --ml-gray: #ebebeb;
+            --text-dark: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: var(--ml-gray);
+            color: var(--text-dark);
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: var(--ml-yellow);
+            padding: 12px 5%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .search-box {
+            flex: 1;
+            display: flex;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search-box button {
+            background-color: white;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+        }
+
+        /* ===== MAIN ===== */
+        main {
+            padding: 30px 5%;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* ===== PRODUCT CARD ===== */
+        .product-card {
+            background-color: white;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .price {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .discount {
+            color: #00a650;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .shipping {
+            color: #00a650;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .title {
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 1.3;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: white;
+            margin-top: 40px;
+            padding: 20px 5%;
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MercadoLibre</div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Buscar productos, marcas y más...">
+        <button>🔍</button>
+    </div>
+
+    <nav class="nav-links">
+        <span>Categorías</span>
+        <span>Ofertas</span>
+        <span>Historial</span>
+        <span>Mi cuenta</span>
+    </nav>
+</header>
+
+<main>
+    <h2 class="section-title">Ofertas destacadas</h2>
+
+    <section class="products">
+        <article class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Producto">
+            <div class="product-info">
+                <div class="price">$ 89.999 <span class="discount">20% OFF</span></div>
+                <div class="shipping">Envío gratis</div>
+                <div class="title">Auriculares Bluetooth Inalámbricos</div>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Producto">
+            <div class="product-info">
+                <div class="price">$ 259.999</div>
+                <div class="shipping">Envío gratis</div>
+                <div class="title">Smart TV 50" 4K Ultra HD</div>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Producto">
+            <div class="product-info">
+                <div class="price">$ 45.500 <span class="discount">15% OFF</span></div>
+                <div class="title">Teclado Mecánico RGB Gamer</div>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Producto">
+            <div class="product-info">
+                <div class="price">$ 18.990</div>
+                <div class="shipping">Envío gratis</div>
+                <div class="title">Mouse Inalámbrico Ergonómico</div>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer>
+    © 2026 MercadoFake — Inspirado en e-commerce modernos
+</footer>
+
+</body>
+</html>

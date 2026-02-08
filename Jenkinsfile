@@ -12,9 +12,10 @@ pipeline {
             steps {
                 sh '''
                 docker rm -f mi-sitio-web || true
-                docker run -d --name mi-sitio-web -p 8081:80 mi-sitio-web
+                docker run -d --name mi-sitio-web -p 8090:80 mi-sitio-web
                 '''
             }
         }
     }
 }
+

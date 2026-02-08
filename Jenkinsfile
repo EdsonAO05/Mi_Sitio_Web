@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clonar código') {
             steps {
-                git 'https://github.com/tu_usuario/sitio-web.git'
+                git 'https://github.com/EdsonAO05/Mi_Sitio_Web.git'
             }
         }
         stage('Construir imagen') {

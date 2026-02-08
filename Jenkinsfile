@@ -11,7 +11,7 @@ pipeline {
 
         stage('Ejecutar contenedor') {
             steps {
-                sh 'docker run -d -p 8080:80 mi-sitio-web'
+                sh 'docker run -d -p 8081:80 mi-sitio-web'
             }
         }
     }

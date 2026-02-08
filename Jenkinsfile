@@ -5,13 +5,13 @@ pipeline {
 
         stage('Construir imagen') {
             steps {
-                sh 'docker build -t mi-sitio .'
+                sh 'docker build -t mi-sitio-web .'
             }
         }
 
         stage('Ejecutar contenedor') {
             steps {
-                sh 'docker run -d -p 8080:80 mi-sitio'
+                sh 'docker run -d -p 8080:80 mi-sitio-web'
             }
         }
     }
